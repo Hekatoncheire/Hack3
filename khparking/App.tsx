@@ -5,6 +5,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Svg, { Path } from 'react-native-svg';
 import { FontAwesome5 } from '@expo/vector-icons';
+import HomeScreen from './screens/Home';
+import ParkingLotScreen from './screens/ParkingLot';
+import SettingsScreen from './screens/SettingsScreen';
+import LeaderboardScreen from './screens/LeaderboardScreen';
+import RewardsScreen from './screens/RewardsScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -12,39 +17,6 @@ const Tab = createBottomTabNavigator();
 export default function App() {
   return <MyTabs />
 }
-
-const HomeScreen: React.FC = () => {
-  return (
-    <View style={{backgroundColor: 'white', height: '100%'}}>
-    </View>
-  );
-};
-
-const MapScreen: React.FC = () => {
-  return (
-    <View style={{backgroundColor: 'white', height: '100%'}}>
-    </View>
-  );
-};
-
-const ProfileScreen: React.FC = () => {
-  return (
-    <View style={{backgroundColor: 'white', height: '100%'}}>
-    </View>
-  );
-};
-const LeaderboardScreen: React.FC = () => {
-  return (
-    <View style={{backgroundColor: 'white', height: '100%'}}>
-    </View>
-  );
-};
-const RewardsScreen: React.FC = () => {
-  return (
-    <View style={{backgroundColor: 'white', height: '100%'}}>
-    </View>
-  );
-};
 
 const MyTabs: React.FC = () => {
   return (
@@ -75,7 +47,7 @@ const MyTabs: React.FC = () => {
         },
         tabBarLabel: () => null
       })}>
-        <Tab.Screen name="Leaderboard" component={LeaderboardScreen} options={{
+        <Tab.Screen name="Tabella" component={LeaderboardScreen} options={{
           tabBarIcon: ({ focused, color, size }) => (
             <>
               {focused && (
@@ -87,7 +59,7 @@ const MyTabs: React.FC = () => {
             </>
           ),
         }} />
-        <Tab.Screen name="Map" component={MapScreen} options={{
+        <Tab.Screen name="Parkolóház" component={ParkingLotScreen} options={{
           tabBarIcon: ({ focused, color, size }) => (
             <>
               {focused && (
@@ -99,7 +71,7 @@ const MyTabs: React.FC = () => {
             </>
           ),
         }} />
-        <Tab.Screen name="Home" component={HomeScreen} options={{
+        <Tab.Screen name="Kezdőlap" component={HomeScreen} options={{
           tabBarIcon: ({ focused, color, size }) => (
             <>
               {focused && (
@@ -111,7 +83,7 @@ const MyTabs: React.FC = () => {
             </>
           ),
         }} />
-        <Tab.Screen name="Rewards" component={RewardsScreen} options={{
+        <Tab.Screen name="Jutalmak" component={RewardsScreen} options={{
           tabBarIcon: ({ focused, color, size }) => (
             <>
               {focused && (
@@ -123,7 +95,7 @@ const MyTabs: React.FC = () => {
             </>
           ),
         }} />
-        <Tab.Screen name="Settings" component={ProfileScreen} options={{
+        <Tab.Screen name="Beállítások" component={SettingsScreen} options={{
           tabBarIcon: ({ focused, color, size }) => (
             <>
               {focused && (
