@@ -15,38 +15,33 @@ export default function App() {
 
 const HomeScreen: React.FC = () => {
   return (
-    <View>
-      <Text>Home Screen</Text>
+    <View style={{backgroundColor: 'white', height: '100%'}}>
     </View>
   );
 };
 
 const MapScreen: React.FC = () => {
   return (
-    <View>
-      <Text>Search Screen</Text>
+    <View style={{backgroundColor: 'white', height: '100%'}}>
     </View>
   );
 };
 
 const ProfileScreen: React.FC = () => {
   return (
-    <View>
-      <Text>Profile Screen</Text>
+    <View style={{backgroundColor: 'white', height: '100%'}}>
     </View>
   );
 };
 const LeaderboardScreen: React.FC = () => {
   return (
-    <View>
-      <Text>Profile Screen</Text>
+    <View style={{backgroundColor: 'white', height: '100%'}}>
     </View>
   );
 };
 const RewardsScreen: React.FC = () => {
   return (
-    <View>
-      <Text>Profile Screen</Text>
+    <View style={{backgroundColor: 'white', height: '100%'}}>
     </View>
   );
 };
@@ -96,10 +91,10 @@ const MyTabs: React.FC = () => {
           tabBarIcon: ({ focused, color, size }) => (
             <>
               {focused && (
-                <><Image source={require('../khparking/assets/icon_background.png')} style={{ zIndex: 1, position: 'absolute', top: 0}} /><Ionicons name='ios-home-outline' size={size} color='#00AEEF' style={{zIndex:2}}/></>
+                <><Image source={require('../khparking/assets/icon_background.png')} style={{ zIndex: 1, position: 'absolute', top: 0}} /><FontAwesome5 name="parking" size={24} color="#00AEEF" style={{zIndex: 2}}/></>
               )}
               {!focused && (
-                <Ionicons name="home" size={size} color='white'/>
+                <FontAwesome5 name="parking" size={24} color="white" />
               )}
             </>
           ),
@@ -128,14 +123,14 @@ const MyTabs: React.FC = () => {
             </>
           ),
         }} />
-        <Tab.Screen name="Profile" component={ProfileScreen} options={{
+        <Tab.Screen name="Settings" component={ProfileScreen} options={{
           tabBarIcon: ({ focused, color, size }) => (
             <>
               {focused && (
-                <><Image source={require('../khparking/assets/icon_background.png')} style={{ zIndex: 1, position: 'absolute', top: 0}} /><Ionicons name='ios-home-outline' size={size} color='#00AEEF' style={{zIndex:2}}/></>
+                <><Image source={require('../khparking/assets/icon_background.png')} style={{ zIndex: 1, position: 'absolute', top: 0}} /><Ionicons name='ios-settings' size={size} color='#00AEEF' style={{zIndex:2}}/></>
               )}
               {!focused && (
-                <Ionicons name="home" size={size} color='white'/>
+                <Ionicons name="ios-settings" size={size} color='white'/>
               )}
             </>
           ),
